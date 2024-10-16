@@ -1,2 +1,2 @@
-# sarsaparilla-solar-system
-Mars ain't big enough for the two of us! Sarsaparilla Solar System is a 2D action platformer with an emphasis on enemy combat and dueling.
+# Sarsaparilla Solar System
+Mars planet ain’t big enough for the two of us! Sarsaparilla Solar System is a 2D action platformer with an emphasis on enemy combat and dueling. The player will travel across desert terrain between 3 Martian camps, battling the extraterrestrial outlaws and dueling the gang lieutenants. With each camp comes unique challenges, including better weapons (on both sides), smarter combatants, and faster gunslingers. Mars country ain't for yellow bellies! 
