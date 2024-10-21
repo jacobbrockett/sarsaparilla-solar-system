@@ -8,6 +8,7 @@ public class Alien : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] float speed = 5f;
+    [SerializeField] float jumpForce = 400f;
 
     /**
     * function: Awake()
@@ -27,5 +28,17 @@ public class Alien : MonoBehaviour
     public void Move(Vector3 movement)
     {
         rb.MovePosition(transform.position + (movement * speed) * Time.fixedDeltaTime); // add position to current position
+    }
+
+    public void Jump()
+    {
+        rb.AddForce(transform.up * jumpForce);
+        
+        
+        // rb.velocity = new Vector2(rb.velocity.x, 400f * Time.fixedDeltaTime * 100);  // Set vertical velocity directly for smooth jump
+        
+        // Vector3 movement = new Vector3 (0, 1, 0);
+        // rb.MovePosition(transform.position + (movement * speed) * Time.fixedDeltaTime); // add position to current position
+
     }
 }
