@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -33,14 +34,20 @@ public class PlayerInputHandler : MonoBehaviour
             movement += new Vector3(1, 0, 0);
         }
 
-        // // Jump:
-        // if (Input.GetKey(KeyCode.W))
-        // {
-        //     movement += new Vector3(0, 1, 0);
-        // }
-
         // Move player alien:
         playerAlien.Move(movement);
+    }
+
+    void Update() 
+    {
+        // Jump:
+        // if (Input.GetKeyDown(KeyCode.W))
+        // {
+        //     Debug.Log("JUMP");
+        //     playerAlien.Jump();
+        // }
+
+
     }
     
 }
