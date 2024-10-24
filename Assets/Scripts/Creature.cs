@@ -24,7 +24,6 @@ public class Creature : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(1.8f, 0.3f), CapsuleDirection2D.Horizontal, 0, groundLayer);
     }
 
     /**
@@ -38,12 +37,27 @@ public class Creature : MonoBehaviour
         rb.MovePosition(transform.position + (movement * moveSpeed) * Time.fixedDeltaTime); // add position to current position
     }
 
+    public void MoveLeft()
+    {
+        rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+    }
+
+    public void MoveRight()
+    {
+        rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+    }
+
     public void Jump()
     {
-        if(isGrounded)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-        }
+        // isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(1.8f, 0.3f), CapsuleDirection2D.Horizontal, 0, groundLayer);
+        
+        // if(isGrounded)
+        // {
+        //     Debug.Log("Grounded and Jumping");
+        //     rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+        // }
+
+        rb.velocity = new Vector2(rb.velocity.x, jumpPower);
     }
         
 }
