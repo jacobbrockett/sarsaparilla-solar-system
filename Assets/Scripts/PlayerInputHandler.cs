@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -40,10 +41,13 @@ public class PlayerInputHandler : MonoBehaviour
     void Update() 
     {
         // Jump:
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            playerAlien.Jump();
-        }
+        // if (Input.GetKeyDown(KeyCode.W))
+        // {
+        //     Debug.Log("JUMP");
+        //     playerAlien.Jump();
+        // }
+
+
     }
     
 }
