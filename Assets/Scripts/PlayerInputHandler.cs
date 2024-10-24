@@ -11,7 +11,7 @@ using UnityEngine.Audio;
 public class PlayerInputHandler : MonoBehaviour
 {
     [Header("Sprites")]
-    [SerializeField] Alien playerAlien;
+    [SerializeField] Creature playerCreature;
 
     /**
     * function: FixedUpdate()
@@ -35,19 +35,16 @@ public class PlayerInputHandler : MonoBehaviour
         }
 
         // Move player alien:
-        playerAlien.Move(movement);
+        playerCreature.Move(movement);
     }
 
     void Update() 
     {
         // Jump:
-        // if (Input.GetKeyDown(KeyCode.W))
-        // {
-        //     Debug.Log("JUMP");
-        //     playerAlien.Jump();
-        // }
-
-
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            playerCreature.Jump();
+        }
     }
     
 }

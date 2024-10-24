@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 1362086095}
   - component: {fileID: 1362086098}
   - component: {fileID: 1362086099}
+  - component: {fileID: 1362086100}
   m_Layer: 0
   m_Name: Creature
   m_TagString: Untagged
@@ -497,7 +498,7 @@ Transform:
   m_GameObject: {fileID: 1362086094}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -538,13 +539,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362086094}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4edd877cbd72f4ecd8866654bd34399d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpPower: 15
+  groundCheck: {fileID: 1362086097}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &1362086100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362086094}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e915bb8ab58a4ff98e55d7f39aea2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 15
-  groundCheck: {fileID: 953285788}
+  groundCheck: {fileID: 1362086097}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -562,7 +581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1187419103205933010, guid: 9e0c5b2ccbf08497a9336d33569adead, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2874906028980646637, guid: 9e0c5b2ccbf08497a9336d33569adead, type: 3}
       propertyPath: m_LocalPosition.x
@@ -608,6 +627,10 @@ PrefabInstance:
       propertyPath: playerAlien
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7512190617336934373, guid: 9e0c5b2ccbf08497a9336d33569adead, type: 3}
+      propertyPath: playerCreature
+      value: 
+      objectReference: {fileID: 1362086099}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
