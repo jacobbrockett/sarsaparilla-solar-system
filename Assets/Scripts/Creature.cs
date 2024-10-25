@@ -56,7 +56,8 @@ public class Creature : MonoBehaviour
         //     Debug.Log("Grounded and Jumping");
         //     rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         // }
-
+        
+        // TODO: Add constraint to only jump when on the ground
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
     }
         
