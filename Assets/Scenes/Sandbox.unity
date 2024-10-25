@@ -122,6 +122,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &112707559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9136059909289980719, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+  m_PrefabInstance: {fileID: 6237570833147303926}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4edd877cbd72f4ecd8866654bd34399d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,17 +351,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bc438e90c64448078b6882e6e3a5756, type: 3}
---- !u!114 &1362086099 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9116801771802529537, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
-  m_PrefabInstance: {fileID: 6951707219783437359}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4edd877cbd72f4ecd8866654bd34399d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4714710362593348134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -414,12 +414,69 @@ PrefabInstance:
     - target: {fileID: 7512190617336934373, guid: 9e0c5b2ccbf08497a9336d33569adead, type: 3}
       propertyPath: playerCreature
       value: 
-      objectReference: {fileID: 1362086099}
+      objectReference: {fileID: 112707559}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e0c5b2ccbf08497a9336d33569adead, type: 3}
+--- !u!1001 &6237570833147303926
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1637587936999429434, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_Name
+      value: Sheriff_Marvin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553106304366199369, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ba0917a9d2cd45ef9922d3a99d96ef8, type: 3}
 --- !u!1001 &6951707219783437359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -431,6 +488,10 @@ PrefabInstance:
     - target: {fileID: 1654313585272908052, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
       propertyPath: m_Name
       value: Creature
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654313585272908052, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8574308485787647591, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -485,3 +546,4 @@ SceneRoots:
   - {fileID: 4714710362593348134}
   - {fileID: 998463428}
   - {fileID: 6951707219783437359}
+  - {fileID: 6237570833147303926}

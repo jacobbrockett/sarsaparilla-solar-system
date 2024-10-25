@@ -13,6 +13,12 @@ public class Creature : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     bool isGrounded;
 
+
+    // Smoothly tilts a transform towards a target rotation.
+    [SerializeField] float smooth = 5.0f;
+    float yRotation;
+    Quaternion target;
+
     /**
     * function: Awake()
     * args: None
@@ -20,10 +26,6 @@ public class Creature : MonoBehaviour
     */
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    void Update()
-    {
     }
 
     /**
@@ -40,11 +42,30 @@ public class Creature : MonoBehaviour
     public void MoveLeft()
     {
         rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+
+        // If flipY is true, rotate by 180 degrees on the Y-axis
+        yRotation = 180f;
+
+        // Rotate the object by converting the angles into a quaternion.
+        target = Quaternion.Euler(0f, yRotation, 0f);
+
+        // Dampen towards the target rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+    
     }
 
     public void MoveRight()
     {
         rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+
+        // If flipY is true, rotate by 180 degrees on the Y-axis
+        yRotation = 0f;
+
+        // Rotate the object by converting the angles into a quaternion.
+        target = Quaternion.Euler(0f, yRotation, 0f);
+
+        // Dampen towards the target rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
     }
 
     public void Jump()
