@@ -8,16 +8,15 @@ public class Creature : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float smooth = 50.0f; // Smoothly tilts a transform towards a target rotation.
+    float yRotation; // 180 left, 0 right
+    Quaternion target; // target direction to turn
+
+    [Header("Jump")]
     [SerializeField] int jumpPower = 15;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
     bool isGrounded;
-
-
-    // Smoothly tilts a transform towards a target rotation.
-    [SerializeField] float smooth = 5.0f;
-    float yRotation;
-    Quaternion target;
 
     /**
     * function: Awake()
@@ -31,36 +30,27 @@ public class Creature : MonoBehaviour
     /**
     * function: Move()
     * args:
-    * - Vector3 movement: position to move the creature to
-    * description: moves the creature to a position passed as a parameter
+    * - float direction: -1 left, 1 right
+    * description: moves the creature to left or right
     */
-    public void Move(Vector3 movement)
+    public void Move(float direction)
     {
-        rb.MovePosition(transform.position + (movement * moveSpeed) * Time.fixedDeltaTime); // add position to current position
+        rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
+
+        if(direction == -1){
+            // turn left
+            yRotation = 180f;
+        }
+        else{
+            // turn right
+            yRotation = 0f;
+        }
+        
+        flipDirection(yRotation);        
     }
 
-    public void MoveLeft()
+    void flipDirection(float yRotation)
     {
-        rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-
-        // If flipY is true, rotate by 180 degrees on the Y-axis
-        yRotation = 180f;
-
-        // Rotate the object by converting the angles into a quaternion.
-        target = Quaternion.Euler(0f, yRotation, 0f);
-
-        // Dampen towards the target rotation
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
-    
-    }
-
-    public void MoveRight()
-    {
-        rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-
-        // If flipY is true, rotate by 180 degrees on the Y-axis
-        yRotation = 0f;
-
         // Rotate the object by converting the angles into a quaternion.
         target = Quaternion.Euler(0f, yRotation, 0f);
 
