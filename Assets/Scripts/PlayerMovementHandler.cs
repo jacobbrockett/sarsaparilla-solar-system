@@ -11,7 +11,7 @@ using UnityEngine.Audio;
 public class PlayerInputHandler : MonoBehaviour
 {
     [Header("Sprites")]
-    [SerializeField] Sheriff playerSheriff;
+    [SerializeField] Creature playerCreature;
 
     /**
     * function: FixedUpdate()
@@ -23,13 +23,13 @@ public class PlayerInputHandler : MonoBehaviour
         // Move Left:
         if (Input.GetKey(KeyCode.A))
         {
-            playerSheriff.Move(direction: -1);
+            playerCreature.Move(direction: -1);
         }
 
         // Move Right:
         if (Input.GetKey(KeyCode.D))
         {
-            playerSheriff.Move(direction: 1);
+            playerCreature.Move(direction: 1);
         }
         
     }
@@ -39,17 +39,7 @@ public class PlayerInputHandler : MonoBehaviour
         // Jump:
         if (Input.GetKeyDown(KeyCode.W))
         {
-            playerSheriff.Jump();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            playerSheriff.GetProjectileLauncher().Launch();
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            playerSheriff.GetProjectileLauncher().Reload();
+            playerCreature.Jump();
         }
     }
     

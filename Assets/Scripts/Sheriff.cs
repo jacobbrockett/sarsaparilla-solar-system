@@ -12,5 +12,16 @@ public class Sheriff : Martian
     // Update is called once per frame
     void Update()
     {
+        // Fire weapon
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetProjectileLauncher().Launch();
+        }
+
+        // Reload weapon
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GetProjectileLauncher().Reload();
+        }
     }
 }
