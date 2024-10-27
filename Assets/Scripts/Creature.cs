@@ -60,6 +60,8 @@ public class Creature : MonoBehaviour
 
     public void Jump()
     {
+
+        // TODO: Add constraint to only jump when on the ground
         // isGrounded = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(1.8f, 0.3f), CapsuleDirection2D.Horizontal, 0, groundLayer);
         
         // if(isGrounded)
@@ -68,7 +70,6 @@ public class Creature : MonoBehaviour
         //     rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         // }
         
-        // TODO: Add constraint to only jump when on the ground
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
     }
         
