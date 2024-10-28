@@ -12,6 +12,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheriff_Marvin
       objectReference: {fileID: 0}
+    - target: {fileID: 2135714215018094422, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7223389
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135714215018094422, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0096669
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135714215018094422, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.11116946
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135714215018094422, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.00483346
+      objectReference: {fileID: 0}
     - target: {fileID: 2152502805223108739, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -34,11 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8574308485787647591, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8.05
       objectReference: {fileID: 0}
     - target: {fileID: 8574308485787647591, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: 8574308485787647591, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -114,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   smooth: 50
-  jumpPower: 15
+  jumpPower: 20
   groundCheck: {fileID: 2284984943802345625}
   groundLayer:
     serializedVersion: 2
