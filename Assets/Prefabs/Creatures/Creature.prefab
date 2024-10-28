@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d9591b67f4cea4d67ae4239acc1f5b65, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: f86f7dac95e474905b3a7c9a95513a89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,6 +180,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  maxHealth: 3
+  currentHealth: 0
 --- !u!1 &4210171332727337171
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,3 +303,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873a2433f45544384a132fcaad00766e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  creature: {fileID: 9116801771802529537}

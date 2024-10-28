@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8488915587484135041, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
+      propertyPath: creature
+      value: 
+      objectReference: {fileID: 8030246106353154728}
     - target: {fileID: 8574308485787647591, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -135,6 +139,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  maxHealth: 3
+  currentHealth: 0
   projectileLauncher: {fileID: 3206108833182432039}
 --- !u!4 &2284984943802345625 stripped
 Transform:

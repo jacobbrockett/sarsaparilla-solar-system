@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
+    [SerializeField] Creature creature;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +22,11 @@ public class Hitbox : MonoBehaviour
     {
         if(other.CompareTag("Projectile"))
         {
-            Debug.Log("Hit!");
+            // Debug.Log("Hit!");
             Destroy(other.gameObject);
 
-            // TODO: decrement creature health
+            // Decrement creature health
+            creature.DecrementHealth();
         }
     }
 }
