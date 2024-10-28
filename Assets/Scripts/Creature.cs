@@ -18,6 +18,10 @@ public class Creature : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     bool isGrounded;
 
+    [Header("Stats")]
+    [SerializeField] int maxHealth = 3;
+    [SerializeField] int currentHealth;
+
     /**
     * function: Awake()
     * args: None
@@ -25,6 +29,15 @@ public class Creature : MonoBehaviour
     */
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
+    }
+
+    void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     /**
@@ -71,6 +84,21 @@ public class Creature : MonoBehaviour
         // }
         
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+    }
+
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    public void DecrementHealth()
+    {
+        currentHealth = currentHealth - 1;
     }
         
 }
