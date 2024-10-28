@@ -47,8 +47,14 @@ public class Enemy : Martian
 
     IEnumerator AttackRoutine()
     {
-        GetProjectileLauncher().Launch();
-        yield return new WaitForSeconds(2f);
+        while (CanSeeTarget())
+        {
+            GetProjectileLauncher().Launch();
+            yield return new WaitForSeconds(2.0f);
+        }
+        
+        // Set attackRoutine to null when the loop ends
+        attackRoutine = null;
     }
     
 }

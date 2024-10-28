@@ -23,5 +23,10 @@ public class Sheriff : Martian
         {
             GetProjectileLauncher().Reload();
         }
+
+        if(GetCurrentHealth() <= 0f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
