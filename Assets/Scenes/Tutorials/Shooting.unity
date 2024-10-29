@@ -502,10 +502,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1290789648}
     m_Modifications:
     - target: {fileID: 3300255680756741645, guid: 6bc438e90c64448078b6882e6e3a5756, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 89.41801
-      objectReference: {fileID: 0}
-    - target: {fileID: 3300255680756741645, guid: 6bc438e90c64448078b6882e6e3a5756, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.052
       objectReference: {fileID: 0}
@@ -545,29 +541,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300255680756741645, guid: 6bc438e90c64448078b6882e6e3a5756, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6840201083051073167, guid: 6bc438e90c64448078b6882e6e3a5756, type: 3}
       propertyPath: m_Name
       value: GroundBlock
-      objectReference: {fileID: 0}
-    - target: {fileID: 6840201083051073167, guid: 6bc438e90c64448078b6882e6e3a5756, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186496695582497963, guid: 6bc438e90c64448078b6882e6e3a5756, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186496695582497963, guid: 6bc438e90c64448078b6882e6e3a5756, type: 3}
-      propertyPath: m_Constraints
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186496695582497963, guid: 6bc438e90c64448078b6882e6e3a5756, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
