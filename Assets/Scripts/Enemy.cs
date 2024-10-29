@@ -43,6 +43,9 @@ public class Enemy : Martian
         {
             Destroy(this.gameObject);
         }
+
+        GetHealthText().text = GetCurrentHealth().ToString() + '/' + GetMaxHealth().ToString();
+
     }
 
     IEnumerator AttackRoutine()

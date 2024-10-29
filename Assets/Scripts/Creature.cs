@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// Must Include:
+using UnityEngine.UI;
+using TMPro;
 
 public class Creature : MonoBehaviour
 {
@@ -21,6 +24,7 @@ public class Creature : MonoBehaviour
     [Header("Stats")]
     [SerializeField] int maxHealth = 3;
     [SerializeField] int currentHealth;
+    [SerializeField] TextMeshProUGUI healthText;
 
     /**
     * function: Awake()
@@ -38,6 +42,8 @@ public class Creature : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        healthText.text = currentHealth.ToString() + '/' + maxHealth.ToString();
     }
 
     /**
@@ -94,6 +100,11 @@ public class Creature : MonoBehaviour
     public int GetCurrentHealth()
     {
         return currentHealth;
+    }
+
+    public TextMeshProUGUI GetHealthText()
+    {
+        return healthText;
     }
 
     public void DecrementHealth()

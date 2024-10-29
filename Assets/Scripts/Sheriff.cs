@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class Sheriff : Martian
 {
     // Start is called before the first frame update
@@ -26,7 +28,13 @@ public class Sheriff : Martian
 
         if(GetCurrentHealth() <= 0f)
         {
+            // Destroy Sheriff Object
             Destroy(this.gameObject);
+
+            // Reload Scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        GetHealthText().text = GetCurrentHealth().ToString() + '/' + GetMaxHealth().ToString();
     }
 }
