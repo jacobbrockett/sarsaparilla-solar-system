@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4238366065738912278, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8488915587484135041, guid: 8e3e6906df6064bb380715f10833d4f7, type: 3}
       propertyPath: creature
       value: 
@@ -132,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e08972e00c9644178a1f0a3b26e15e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 10
   smooth: 50
   jumpPower: 20
   groundCheck: {fileID: 2284984943802345625}
@@ -141,6 +145,7 @@ MonoBehaviour:
     m_Bits: 64
   maxHealth: 3
   currentHealth: 0
+  healthText: {fileID: 0}
   projectileLauncher: {fileID: 3206108833182432039}
 --- !u!4 &2284984943802345625 stripped
 Transform:
