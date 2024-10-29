@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c3ea27711a3477b83b5a9ff9a4661f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScene: Sandbox
+  openScene: Horse
 --- !u!4 &1031115152
 Transform:
   m_ObjectHideFlags: 0

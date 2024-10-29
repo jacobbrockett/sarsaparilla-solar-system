@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class Creature : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -25,6 +26,8 @@ public class Creature : MonoBehaviour
     [SerializeField] int maxHealth = 3;
     [SerializeField] int currentHealth;
     [SerializeField] TextMeshProUGUI healthText;
+
+    
 
     /**
     * function: Awake()
