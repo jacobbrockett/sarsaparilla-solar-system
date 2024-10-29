@@ -7,16 +7,19 @@ public class HorseMovementHandler : MonoBehaviour
     [Header("Sprites")]
     [SerializeField] Creature playerCreature;
 
+    bool finished = false;
+
     /**
     * function: FixedUpdate()
     * args: None
     * description: Grabs player input and moves the alien accordingly
     */
     void FixedUpdate(){
-
-        // Move right continuously
-        playerCreature.Move(direction: 1);
-        
+        if (!finished)
+        {
+            // Move right continuously
+            playerCreature.Move(direction: 1);
+        }
     }
 
     void Update() 
@@ -26,5 +29,10 @@ public class HorseMovementHandler : MonoBehaviour
         {
             playerCreature.Jump();
         }
+    }
+
+    public void Finished()
+    {
+        finished = true;
     }
 }
